@@ -10,4 +10,4 @@ steps:
   displayName: 'Run batchfiles'
 - task: BatchScript@1
   inputs:
-    filename: D:\a\1\s\test.bat
+    filename: $(Agent.BuildDirectory)\test.bat

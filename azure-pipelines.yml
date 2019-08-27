@@ -11,4 +11,4 @@ steps:
 - task: BatchScript@1
 - task: BatchScript@1
   inputs:
-    filename: '$(Agent.BuildDirectory)'
+    filename: $(Build.Repository.LocalPath)\test.bat

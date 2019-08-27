@@ -10,5 +10,6 @@ steps:
   displayName: 'Run batchfiles'
 - task: BatchScript@1
 - task: BatchScript@1
+  displayName: 'Run using batch script'
   inputs:
-    filename: $(Build.Repository.LocalPath)/test.bat
+    filename: 'Install Tools/test.bat'

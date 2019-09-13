@@ -1,14 +1,9 @@
 trigger:
 - master
 
-pool:
-  vmImage: 'vs2017-win2016' # other options: 'macOS-10.13', 'vs2017-win2016'
+jobs:
 
-steps:
-- script: echo Hello, world!
-  displayName: 'Run batchfiles'
-- task: BatchScript@1
-- task: BatchScript@1
-  displayName: 'Run using batch script'
-  inputs:
-    filename: 'Install Tools/test.bat'
+- job: StarterPipeline
+  displayName: Empty Starter pipeline
+  pool:
+    vmImage: 'vs2017-win2016'

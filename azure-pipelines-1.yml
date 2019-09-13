@@ -1,0 +1,24 @@
+# Pipeline to build the BIOS coide
+
+trigger:
+  batch: true
+  branches:
+    include:
+    - master
+    - users/*
+    - releases/*
+
+jobs:
+
+- job: build_bios_platform
+  displayName: Build BIOS Platform
+  
+  pool:
+    vmImage: 'vs2017-win2016' # 'Choosen the windows sever 2016 which has VS2017 installed'
+      
+  steps: # 'Steps' section is to be used inside 'job' section.
+  - task: Bash@3
+    inputs:
+      targetType: 'inline'
+      script: 'env | sort'
+    displayName: 'Printing Environment variables'
